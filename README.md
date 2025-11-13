@@ -1,2 +1,252 @@
-# -Gensyn-CodeZero-RL-Swarm-Testnet-Node-Run-
+# ⚡️  Gensyn-CodeZero-RL-Swarm-Testnet-Node-Run ⚡️
+
+
+
 Join Gensyn's CodeZero RL Swarm Testnet! Set up and run a testnet node to support Reinforcement Learning (RL) tasks as part of a decentralized artificial intelligence training and inference network.
+
+
+
+
+# 🤖 Gensyn CodeZero RL Swarm Testnet Node Kurulum Rehberi
+
+Bu rehber, **Gensyn**'in merkeziyetsiz bilgi işlem ağı üzerinde, **CodeZero RL Swarm Testnet** düğümünü (Node) başarıyla kurup çalıştırmanız için gerekli tüm adımları içermektedir.
+
+---
+
+## 🎯 Proje Hakkında: RL Swarm Testnet
+
+**Gensyn**, yapay zeka eğitim ve çıkarımını merkezi olmayan bir şekilde sağlayan bir Katman-1 protokolüdür. **CodeZero RL Swarm Testnet** ise, dağıtık bir ortamda karmaşık **Pekiştirmeli Öğrenme (RL)** iş yüklerini çözerek ağın performansını test etmeyi amaçlayan kritik bir test aşamasıdır. Bir düğüm çalıştırmak, bu merkeziyetsiz yapay zeka devrimine erkenden katılmanızı sağlar.
+
+---
+
+## 🛠️ Ön Koşullar
+
+
+
+Lütfen kurulumdan önce aşağıdaki gereksinimlerin karşılandığından emin olun:
+
+* **Git:** Depoyu klonlamak için gereklidir.
+* **Python 3.8+:** Projenin çalışacağı temel ortamdır.
+* **Donanım:** Testnet gereksinimlerine uygun minimum CPU, RAM ve Depolama alanı. (Lütfen resmi Gensyn Testnet dokümantasyonunu kontrol edin.)
+
+
+
+-- Donanım Gereksinimleri -- 
+
+
+GPU Modeli,Mimari,VRAM (Bellek),Bellek Bant Genişliği,TFLOPs (FP64),AI Performans Potansiyeli
+
+RTX 3090,Ampere,24 GB GDDR6X,936 GB/s,~42 TFLOPS (FP32),Yüksek (Giriş/Orta Seviye Node)
+
+RTX 4090,Ada Lovelace,24 GB GDDR6X,1008 GB/s,~83 TFLOPS (FP32),Çok Yüksek (Yüksek Seviye Node)
+
+RTX 5090,Blackwell (Tahmini),32 GB+ (Tahmini),1500+ GB/s (Tahmini),120+ TFLOPS (Tahmini),Premium (Gelecek Nesil Node)
+
+A100 (SMI),Ampere,40 GB / 80 GB HBM2e,1.5 - 2.0 TB/s,9.7 TFLOPS,Veri Merkezi (Premium Hesaplama)
+
+H100 (SMI),Hopper,80 GB HBM3,3.35 TB/s,33.5 TFLOPS,Ultra Premium (En Yüksek Hesaplama)
+
+
+
+---
+
+
+
+
+## Adım 1: Depoyu Klonlama ve Hazırlık
+
+
+
+
+
+
+1.  **Sistem Paketlerini Güncelleyin:
+
+    ```bash
+    sudo apt update && sudo apt upgrade -y
+    ```
+
+
+
+
+
+2.  ***Genel Yardımcı Programları ve Araçları yükleyin**
+
+    ```bash
+    sudo apt install screen curl iptables build-essential git wget lz4 jq make gcc nano automake autoconf tmux htop nvme-cli libgbm1 pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev  -y
+    ```
+
+
+
+
+
+3.  **Python'u yükleyin:
+
+     ```bash
+
+
+
+
+4.  **Node yükleyin:**
+
+    ```bash
+
+
+    sudo apt update
+    curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
+    sudo apt install -y nodejs
+    node -v
+    npm install -g yarn
+    yarn -v
+
+    
+    ```
+
+
+5. **Yarn'ı yükleyin**
+
+
+
+   ```bash
+
+
+   curl -o- -L https://yarnpkg.com/install.sh | bash
+
+
+
+
+
+   export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+
+
+
+
+   source ~/.bashrc
+
+   
+    
+
+
+    ```
+
+
+## Adım 2: HuggingFace Erişim belirtecini edinin  Mecburi değildir
+
+
+
+
+1.  https://huggingface.co/    hesap oluşturun
+
+
+
+2.  https://huggingface.co/settings/tokens     write ile   token oluşturun  
+
+
+
+
+
+
+
+
+
+
+
+
+## Adım 3:  Depoyu Klonlayın
+
+
+  ```bash
+
+
+
+    git clone https://github.com/gensyn-ai/rl-swarm/
+
+
+
+   ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+---
+
+## Adım 2: Bağımlılıkları Yükleme (Install Dependencies) 📦
+
+Sanal ortam aktifken, `requirements.txt` dosyasında listelenen tüm gerekli Python kütüphanelerini yükleyin.
+
+1.  **Bağımlılıkları Yükleme Komutu:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+    > ⚠️ **Not:** Yüksek performanslı hesaplama kütüphaneleri (örn. `torch`, `tensorflow`) büyük boyutlu olabilir ve GPU/CUDA uyumluluğu gerektirebilir. Yükleme sırasında hata alırsanız, ilgili kütüphanelerin resmi kurulum rehberlerini kontrol edin.
+
+---
+
+## Adım 3: Node Yapılandırması (Configuration) ⚙️
+
+Gensyn düğümünüzü ağa bağlamak için API anahtarınızı veya cüzdan bilgilerinizi yapılandırmanız gerekir.
+
+1.  **Örnek Dosyayı Kopyalama:** Depoda bulunan örnek yapılandırma dosyasını (`config.example.py` veya `.env.example`) kopyalayarak gerçek yapılandırma dosyanızı oluşturun:
+
+    ```bash
+    cp config.example.py config.py
+    # Veya cp .env.example .env
+    ```
+
+2.  **Yapılandırma Dosyasını Düzenleme:** Oluşturduğunuz `config.py` (veya `.env`) dosyasını bir metin düzenleyici ile açın. Gensyn cüzdan bilgilerinizi, API anahtarınızı ve ağ bağlantı detaylarınızı ilgili alanlara girin.
+
+    ```python
+    # config.py içinden bir örnek
+    GENSYN_WALLET_PRIVATE_KEY = "BURAYA_ÖZEL_ANAHTARINIZI_GIRIN"
+    TESTNET_ENDPOINT = "wss://testnet.gensyn.ai/ws"
+    ```
+
+---
+
+## Adım 4: Düğümü Başlatma (Running the Node) 🚀
+
+Tüm bağımlılıklar yüklendi ve yapılandırma tamamlandıysa, düğümünüzü başlatmaya hazırsınız.
+
+1.  **Node Başlatma Komutu:**
+
+    ```bash
+    python3 node_runner.py 
+    # Veya projenin ana başlatma betiğinin adını kullanın.
+    ```
+
+2.  **Çalışmayı Onaylama:** Düğüm başarıyla başlatılırsa, terminalde ağa bağlandığını ve **"Waiting for RL tasks..."** (RL görevlerini bekliyor...) gibi bir mesaj gördüğünüzü teyit edin.
+
+---
+
+## 🛑 Düğümü Durdurma
+
+Düğümün çalışmasını sonlandırmak için terminalde `Ctrl + C` tuş kombinasyonunu kullanın.
+
+**Sanal Ortamdan Çıkış:** İşiniz bittiğinde sanal ortamdan çıkmayı unutmayın:
+
+```bash
+deactivate
