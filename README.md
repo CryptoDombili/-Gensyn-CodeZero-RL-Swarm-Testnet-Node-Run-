@@ -1,14 +1,19 @@
 # 🤖 Gensyn CodeZero RL Swarm Testnet Node Kurulum Rehberi
 
+
 Bu rehber, **Gensyn**'in merkeziyetsiz bilgi işlem ağı üzerinde, **CodeZero RL Swarm Testnet** düğümünü (Node) başarıyla kurup çalıştırmanız için gerekli tüm adımları içermektedir.
+
 
 ---
 
 ## 🎯 Proje Hakkında: RL Swarm Testnet
 
-**Gensyn**, yapay zeka eğitim ve çıkarımını merkezi olmayan bir şekilde sağlayan bir Katman-1 protokolüdür. **CodeZero RL Swarm Testnet** ise, dağıtık bir ortamda karmaşık **Pekiştirmeli Öğrenme (RL)** iş yüklerini çözerek ağın performansını test etmeyi amaçlayan kritik bir test aşamasıdır. Bir düğüm çalıştırmak, bu merkeziyetsiz yapay zeka devrimine erkenden katılmanızı sağlar.
+
+**Gensyn**, yapay zeka eğitim ve çıkarımını merkezi olmayan bir şekilde sağlayan bir Katman-2 protokolüdür. **CodeZero RL Swarm Testnet** ise, dağıtık bir ortamda karmaşık **Pekiştirmeli Öğrenme (RL)** iş yüklerini çözerek ağın performansını test etmeyi amaçlayan kritik bir test aşamasıdır. Bir düğüm çalıştırmak, bu merkeziyetsiz yapay zeka devrimine erkenden katılmanızı sağlar.
+
 
 ---
+
 
 
 
@@ -39,6 +44,8 @@ Bu rehber, **Gensyn**'in merkeziyetsiz bilgi işlem ağı üzerinde, **CodeZero 
 
 
 
+
+
 Lütfen kurulumdan önce aşağıdaki gereksinimlerin karşılandığından emin olun:
 
 * **Git:** Depoyu klonlamak için gereklidir.
@@ -50,22 +57,24 @@ Lütfen kurulumdan önce aşağıdaki gereksinimlerin karşılandığından emin
 -- Donanım Gereksinimleri -- 
 
 
-GPU Modeli,Mimari,VRAM (Bellek),Bellek Bant Genişliği,TFLOPs (FP64),AI Performans Potansiyeli
+
+** CPU & GPU Destekleniyor **
 
 
-RTX 3090,Ampere,24 GB GDDR6X,936 GB/s,~42 TFLOPS (FP32),Yüksek (Giriş/Orta Seviye Node)
 
 
-RTX 4090,Ada Lovelace,24 GB GDDR6X,1008 GB/s,~83 TFLOPS (FP32),Çok Yüksek (Yüksek Seviye Node)
+Sadece - CPU :  arm64 or x86 CPU with minimum 32gb ram (Eğitim sırasında başka uygulamalar çalıştırırsanız, eğitimin çökebileceğini unutmayın.).
 
 
-RTX 5090,Blackwell (Tahmini),32 GB+ (Tahmini),1500+ GB/s (Tahmini),120+ TFLOPS (Tahmini),Premium (Gelecek Nesil Node)
 
 
-A100 (SMI),Ampere,40 GB / 80 GB HBM2e,1.5 - 2.0 TB/s,9.7 TFLOPS,Veri Merkezi (Premium Hesaplama)
+
+VEYA
 
 
-H100 (SMI),Hopper,80 GB HBM3,3.35 TB/s,33.5 TFLOPS,Ultra Premium (En Yüksek Hesaplama)
+
+
+
 
 
 
