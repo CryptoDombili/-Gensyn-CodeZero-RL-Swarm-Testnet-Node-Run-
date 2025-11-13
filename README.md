@@ -75,25 +75,19 @@ VEYA
 ·  GPU :
 
 
-·  RTX 3090
+   ·  RTX 3090
 
+   ·  RTX 4090
 
-·  RTX 4090
+   ·  RTX 5090
 
+   ·  A100
 
-·  RTX 5090
+   ·  H100
+               
+   ·  ≥24GB vRAM GPU is recommended, 
 
-
-·  A100
-
-
-·  H100
-        
-        
-·  ≥24GB vRAM GPU is recommended, 
-
-
- ·  ≥12.4 CUDA Driver.
+   ·  ≥12.4 CUDA Driver.
 
         
 
