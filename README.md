@@ -2,7 +2,15 @@
 
 
 
-Join Gensyn's CodeZero RL Swarm Testnet! Set up and run a testnet node to support Reinforcement Learning (RL) tasks as part of a decentralized artificial intelligence training and inference network.
+ **Gensyn**'in CodeZero RL Swarm Testnet! Bu rehber, merkeziyetsiz bilgi işlem ağı üzerinde, **CodeZero RL Swarm Testnet** düğümünü (Node) başarıyla kurup çalıştırmanız için gerekli tüm adımları içermektedir.
+
+
+
+
+<img width="552" height="274" alt="image" src="https://github.com/user-attachments/assets/f1877150-2235-4b0b-8c78-0fc3afa0c685" />
+
+
+
 
 
 
