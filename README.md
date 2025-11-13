@@ -155,32 +155,14 @@ H100 (SMI),Hopper,80 GB HBM3,3.35 TB/s,33.5 TFLOPS,Ultra Premium (En Yüksek Hes
    ```
 
    ```bash
-
-
-
-
-
    export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-
     ```
 
 
 
 
    ```bash
-
-
-
-
-
-
    source ~/.bashrc
-
-
-
-
-
    ```
 
    
