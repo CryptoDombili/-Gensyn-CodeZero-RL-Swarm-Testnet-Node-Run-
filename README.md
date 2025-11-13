@@ -93,7 +93,9 @@ H100 (SMI),Hopper,80 GB HBM3,3.35 TB/s,33.5 TFLOPS,Ultra Premium (En Yüksek Hes
 1.  **Sistem Paketlerini Güncelleyin:
 
     ```bash
+    
     sudo apt update && sudo apt upgrade -y
+    
     ```
 
 
@@ -103,7 +105,9 @@ H100 (SMI),Hopper,80 GB HBM3,3.35 TB/s,33.5 TFLOPS,Ultra Premium (En Yüksek Hes
 2.  ***Genel Yardımcı Programları ve Araçları yükleyin**
 
     ```bash
+    
     sudo apt install screen curl iptables build-essential git wget lz4 jq make gcc nano automake autoconf tmux htop nvme-cli libgbm1 pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev  -y
+    
     ```
 
 
@@ -114,11 +118,7 @@ H100 (SMI),Hopper,80 GB HBM3,3.35 TB/s,33.5 TFLOPS,Ultra Premium (En Yüksek Hes
 
      ```bash
 
-
-
      sudo apt install python3 python3-pip python3-venv python3-dev -y
-    
-
 
      ```
 
