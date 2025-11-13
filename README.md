@@ -85,7 +85,9 @@ VEYA
    
    ·  H100      
    
-   ·  ≥24GB vRAM GPU is recommended
+   
+   ·  ≥24 GB vRAM GPU önerilir. 
+
    
    ·  ≥12.4 CUDA Driver.
 
