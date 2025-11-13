@@ -54,7 +54,7 @@ Lütfen kurulumdan önce aşağıdaki gereksinimlerin karşılandığından emin
 
 
 
- Donanım Gereksinimleri 
+##  Donanım Gereksinimleri 
 
 
 
