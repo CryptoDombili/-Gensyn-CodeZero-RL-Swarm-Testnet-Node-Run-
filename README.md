@@ -243,7 +243,17 @@ OR
 
 
 
-3- Set up and run Swarm 
+
+## 5 - If you don't optimize VRAM, the 3090 GPU won't run the 1.5 model at all. 
+
+
+
+
+
+
+
+
+4- Set up and run Swarm 
 
 
    ```bash
@@ -320,7 +330,7 @@ OR
 
 
 
-2 -  It will ask you for the model name. There are two models available. If you are using the 3090 or 4090, press Enter or type the 0.5 model below and continue. If you have a 5090 or higher device, type the 1.5 model and press Enter. 
+2 - "if you don't perform this VRAM optimization "  It will ask you for the model name. There are two models available. If you are using the 3090 or 4090, press Enter or type the 0.5 model below and continue. If you have a 5090 or higher device, type the 1.5 model and press Enter. 
 
 
 
