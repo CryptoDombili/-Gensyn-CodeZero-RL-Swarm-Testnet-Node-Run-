@@ -289,7 +289,7 @@ VEYA
    ```
 
 
-4-  Ctrl + A D ile çıkın ve aşşağıdaki komutla önceki screen'e dönün lütfen  
+4-  Ctrl + A  D   ile çıkın ve aşşağıdaki komutla önceki screen'e dönün lütfen  
 
 
    ```bash
@@ -344,6 +344,14 @@ VEYA
 
 
 
+## Node Adı 
+
+
+
+
+
+
+1 - Lütfen node adınızı ve peer id'nizi kopyalayın bu önemlidir  " Hello'dan başlayan node adınızdır  ve peer id o adresi kopyalayın ve kaydedin "
 
 
 
