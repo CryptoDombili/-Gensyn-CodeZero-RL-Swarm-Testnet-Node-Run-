@@ -41,7 +41,7 @@ This guide contains all the steps necessary to successfully set up and run the *
 
 
 
-## 🛠️ Ön Koşullar
+## 🛠️  Pre requisites
 
 
 
@@ -359,6 +359,21 @@ VEYA
 
 
 2 -  Burdan mail ile bağlanıp puanlarınıza bakabilirsiniz  https://dashboard.gensyn.ai/
+
+
+
+
+
+
+
+
+
+<img width="1141" height="368" alt="image" src="https://github.com/user-attachments/assets/0fd4db6a-a80c-4504-a041-60c6e9cbea73" />
+
+
+
+
+
 
 
 
