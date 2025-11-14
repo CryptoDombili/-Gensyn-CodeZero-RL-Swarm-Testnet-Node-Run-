@@ -289,73 +289,65 @@ VEYA
    ```
 
 
-3-  Ctrl + A D ile çıkın ve aşşağıdaki komutla önceki screen'e dönün lütfen  
+4-  Ctrl + A D ile çıkın ve aşşağıdaki komutla önceki screen'e dönün lütfen  
 
 
    ```bash
     screen -r  "screen numarası"
    ```      
-      
 
+      
     
 
----
+## Son Adımlar 
 
-## Adım 2: Bağımlılıkları Yükleme (Install Dependencies) 📦
 
-Sanal ortam aktifken, `requirements.txt` dosyasında listelenen tüm gerekli Python kütüphanelerini yükleyin.
 
-1.  **Bağımlılıkları Yükleme Komutu:**
 
-    ```bash
-    pip install -r requirements.txt
-    ```
 
-    > ⚠️ **Not:** Yüksek performanslı hesaplama kütüphaneleri (örn. `torch`, `tensorflow`) büyük boyutlu olabilir ve GPU/CUDA uyumluluğu gerektirebilir. Yükleme sırasında hata alırsanız, ilgili kütüphanelerin resmi kurulum rehberlerini kontrol edin.
 
----
+1 -  Kurulumlar bittikten sonra  son adımda sizden hugginface y/N diyecek eğer internet hızınız iyiyse  hugginface  y diyin ama kötüyse N diyin yoksa turları yetişemiyor
 
-## Adım 3: Node Yapılandırması (Configuration) ⚙️
 
-Gensyn düğümünüzü ağa bağlamak için API anahtarınızı veya cüzdan bilgilerinizi yapılandırmanız gerekir.
 
-1.  **Örnek Dosyayı Kopyalama:** Depoda bulunan örnek yapılandırma dosyasını (`config.example.py` veya `.env.example`) kopyalayarak gerçek yapılandırma dosyanızı oluşturun:
 
-    ```bash
-    cp config.example.py config.py
-    # Veya cp .env.example .env
-    ```
 
-2.  **Yapılandırma Dosyasını Düzenleme:** Oluşturduğunuz `config.py` (veya `.env`) dosyasını bir metin düzenleyici ile açın. Gensyn cüzdan bilgilerinizi, API anahtarınızı ve ağ bağlantı detaylarınızı ilgili alanlara girin.
 
-    ```python
-    # config.py içinden bir örnek
-    GENSYN_WALLET_PRIVATE_KEY = "BURAYA_ÖZEL_ANAHTARINIZI_GIRIN"
-    TESTNET_ENDPOINT = "wss://testnet.gensyn.ai/ws"
-    ```
 
----
 
-## Adım 4: Düğümü Başlatma (Running the Node) 🚀
 
-Tüm bağımlılıklar yüklendi ve yapılandırma tamamlandıysa, düğümünüzü başlatmaya hazırsınız.
 
-1.  **Node Başlatma Komutu:**
 
-    ```bash
-    python3 node_runner.py 
-    # Veya projenin ana başlatma betiğinin adını kullanın.
-    ```
+2 -  Sizden model ismi isteyecek zaten 2 tane model var eğer 3090 ve 4090 kullanıyorsanız enter basıp yada aşşağıdaki 0.5 modelini yazıp devam edebilirsiniz yada 5090 ve üstü cihazınız varsa 1.5  modelini yazın ve enter basın 
 
-2.  **Çalışmayı Onaylama:** Düğüm başarıyla başlatılırsa, terminalde ağa bağlandığını ve **"Waiting for RL tasks..."** (RL görevlerini bekliyor...) gibi bir mesaj gördüğünüzü teyit edin.
 
----
 
-## 🛑 Düğümü Durdurma
 
-Düğümün çalışmasını sonlandırmak için terminalde `Ctrl + C` tuş kombinasyonunu kullanın.
 
-**Sanal Ortamdan Çıkış:** İşiniz bittiğinde sanal ortamdan çıkmayı unutmayın:
 
-```bash
-deactivate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
