@@ -244,7 +244,13 @@ OR
 
 
 
-## 5 - If you don't optimize VRAM, the 3090 GPU won't run the 1.5 model at all. 
+5 - If you don't optimize VRAM, the 3090 GPU won't run the 1.5 model at all. 
+
+
+   ```bash
+    echo "Before:" && grep "dtype:" code_gen_exp/config/code-gen-swarm.yaml && sed -i "s/dtype: 'float32'/dtype: 'bfloat16'/" code_gen_exp/config/code-gen-swarm.yaml && echo "After:" && grep "dtype:" code_gen_exp/config/code-gen-swarm.yaml
+   ```
+
 
 
 
