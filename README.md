@@ -242,9 +242,11 @@ OR
 
 
 
+---
 
 
-5 - If you don't optimize VRAM, the 3090 GPU won't run the 1.5 model at all. 
+3 - If you don't optimize VRAM, the 3090 GPU won't run the 1.5 model at all. 
+
 
 
    ```bash
@@ -253,6 +255,8 @@ OR
 
 
 
+
+---
 
 
 
