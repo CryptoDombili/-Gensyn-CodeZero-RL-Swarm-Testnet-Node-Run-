@@ -357,6 +357,8 @@ VEYA
 
 
 
+2 -  Burdan mail ile bağlanıp puanlarınıza bakabilirsiniz  https://dashboard.gensyn.ai/
+
 
 
 
