@@ -368,3 +368,24 @@ VEYA
 
 
 
+
+
+## Son olarak eğer node varsa güncellemek istiyorsanız
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
