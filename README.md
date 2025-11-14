@@ -47,30 +47,31 @@ This guide contains all the steps necessary to successfully set up and run the *
 
 
 
-Lütfen kurulumdan önce aşağıdaki gereksinimlerin karşılandığından emin olun:
+Please ensure the following requirements are met before installation:
 
-* **Git:** Depoyu klonlamak için gereklidir.
-* **Python 3.8+:** Projenin çalışacağı temel ortamdır.
-* **Donanım:** Testnet gereksinimlerine uygun minimum CPU, RAM ve Depolama alanı. (Lütfen resmi Gensyn Testnet dokümantasyonunu kontrol edin.)
 
+* **Git:** Required to clone the repository.
+* **Python 3.8+:** This is the primary environment in which the project will run.
+* **Hardware:** Minimum CPU, RAM, and storage space requirements compatible with Testnet specifications. (Please refer to the official Gensyn Testnet documentation.)
 
 
 ##  Donanım Gereksinimleri 
 
 
 
- CPU & GPU Destekleniyor 
+
+ CPU & GPU Supported 
 
 
 
 
-Sadece - CPU :  arm64 or x86 CPU with minimum 32gb ram (Eğitim sırasında başka uygulamalar çalıştırırsanız, eğitimin çökebileceğini unutmayın.).
+Only - CPU: arm64 or x86 CPU with a minimum of 32GB RAM (Please note that running other applications during training may cause the training to crash.).
 
 
 
 
 
-VEYA
+OR
 
 
  ·  GPU :
@@ -87,7 +88,7 @@ VEYA
    ·  H100      
    
    
-   ·  ≥24 GB vRAM GPU önerilir. 
+   ·  ≥24 GB vRAM GPU is recommended. 
 
    
    ·  ≥12.4 CUDA Driver.
@@ -101,14 +102,14 @@ VEYA
 
 
 
-## Adım 1: Depoyu Klonlama ve Hazırlık
+## Step 1: Cloning the Repository and Preparation
 
 
 
 
 
 
-1.  **Sistem Paketlerini Güncelleyin:**
+1.  **Update System Packages:**
 
     ```bash
     sudo apt update && sudo apt upgrade -y 
@@ -118,7 +119,7 @@ VEYA
 
 
 
-2.  **Genel Yardımcı Programları ve Araçları yükleyin**
+2.  *Install General Utility Programs and Tools**
 
     ```bash
     sudo apt install screen curl iptables build-essential git wget lz4 jq make gcc nano automake autoconf tmux htop nvme-cli libgbm1 pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev  -y
@@ -128,7 +129,7 @@ VEYA
 
 
 
-3.   **Python'u yükleyin:**
+3.   **Install Python:**
 
      ```bash
      sudo apt install python3 python3-pip python3-venv python3-dev -y
@@ -137,7 +138,7 @@ VEYA
 
 
 
-4.  **Node yükleyin:**
+4.  **Install the node:**
 
     ```bash
     sudo apt update
@@ -149,7 +150,7 @@ VEYA
     ```
 
 
-5. **Yarn'ı yükleyin**
+5. *Load the yarn**
 
 
 
@@ -176,21 +177,16 @@ VEYA
    
 
 
-## Adım 2: HuggingFace Erişim belirtecini edinin  Mecburi değildir
+## Step 2: Get the HuggingFace access token  Optional
 
 
 
 
-1.  https://huggingface.co/    hesap oluşturun
+1.  https://huggingface.co/    Create an account
 
 
 
-2.  https://huggingface.co/settings/tokens     write ile   token oluşturun  
-
-
-
-
-
+2.  https://huggingface.co/settings/tokens     Create a token with write 
 
 
 
@@ -198,7 +194,12 @@ VEYA
 
 
 
-## Adım 3:  Depoyu Klonlayın
+
+
+
+
+
+## Step 3: Clone the Repository
 
 
   ```bash
@@ -208,7 +209,7 @@ VEYA
 
 
 
-## Adım 4:  Run the Swarm
+## Step 4: Run the Swarm
 
 
 
@@ -220,7 +221,7 @@ VEYA
 
 
 
-1-  Yeni Bir Screen açın 
+1-  Open a New Screen 
 
    ```bash
     screen -S swarm
@@ -231,7 +232,7 @@ VEYA
 
 
 
-2- rl-swarm dizinine girin
+2-  Enter the rl-swarm directory
 
 
    ```bash
@@ -242,7 +243,7 @@ VEYA
 
 
 
-3- Swarm'ı kurun ve çalıştırın 
+3- Set up and run Swarm 
 
 
    ```bash
@@ -253,12 +254,12 @@ VEYA
 
 
 
-## Adım 5:  Tünelleme ile mail bağlama 
+## Step 5: Connecting email via tunneling
 
 
 
 
-1-  önceki screen'den ctrl + a d ile çıkın  sonra yeni bir screen oluşturun 
+1-  Exit the previous screen with Ctrl + A D. Then create a new screen. 
 
  
      
@@ -268,7 +269,7 @@ VEYA
 
 
 
-2-  rl-swarm dizinine girin
+2-  Enter the rl-swarm directory
 
 
 
@@ -279,7 +280,7 @@ VEYA
 
 
 
-3-  Bu aşşağıdaki kodu yapıştırın ve size verdiği url ile websiteye gidin sizden ip istiyecek şifre olarak sunucu ip'sini verin kabul edecek sonra mail ile giriş yapın 
+3-  Paste the code below and go to the website using the URL it provides. It will ask for your IP address; enter the server IP address as the password. It will accept it, then log in with your email.  
 
 
 
@@ -290,7 +291,7 @@ VEYA
    ```
 
 
-4-  Ctrl + A  D   ile çıkın ve aşşağıdaki komutla önceki screen'e dönün lütfen  
+4-  Press Ctrl + A, then D to exit, and please return to the previous screen using the following command:  
 
 
    ```bash
@@ -300,14 +301,14 @@ VEYA
       
     
 
-## Son Adımlar 
+## Final Steps  
 
 
 
 
 
 
-1 -  Kurulumlar bittikten sonra  son adımda sizden hugginface y/N diyecek eğer internet hızınız iyiyse  hugginface  y diyin ama kötüyse N diyin yoksa turları yetişemiyor
+1 -  After the installations are complete, in the final step, you will be asked hugginface y/N. If your internet speed is good, say hugginface y, but if it is poor, say N, otherwise the tours will not be completed.
 
 
 
@@ -319,14 +320,14 @@ VEYA
 
 
 
-2 -  Sizden model ismi isteyecek zaten 2 tane model var eğer 3090 ve 4090 kullanıyorsanız enter basıp yada aşşağıdaki 0.5 modelini yazıp devam edebilirsiniz yada 5090 ve üstü cihazınız varsa 1.5  modelini yazın ve enter basın 
+2 -  It will ask you for the model name. There are two models available. If you are using the 3090 or 4090, press Enter or type the 0.5 model below and continue. If you have a 5090 or higher device, type the 1.5 model and press Enter. 
 
 
 
 
 
 
-## Model isimleri
+## Model names
 
 
 
@@ -345,20 +346,20 @@ VEYA
 
 ---
 
-## Node Adı 
+## Node name
 
 
 
 
 
 
-1 - Lütfen node adınızı ve peer id'nizi kopyalayın bu önemlidir  " Hello'dan başlayan node adınızdır  ve peer id o adresi kopyalayın ve kaydedin "
+1 - Please copy your node name and peer ID. This is important.  “Your node name starts with ‘Hello’.  Copy and save that address and your peer ID. 
 
 
 
 
 
-2 -  Burdan mail ile bağlanıp puanlarınıza bakabilirsiniz  https://dashboard.gensyn.ai/
+2 -  You can log in via email from here and check your points.  https://dashboard.gensyn.ai/
 
 
 
@@ -386,13 +387,13 @@ VEYA
 
 ---
 
-## Son olarak eğer node varsa güncellemek istiyorsanız
+## Finally, if there is a node, you want to update it.
 
 
 
 
 
-1 -  node'nuz  screen içinde çalışırken ctrl + c ile durdurun ve aşşağıdaki komutu girin 
+1 -  While your node is running in the screen, stop it with ctrl + c and enter the following command 
 
 
 
@@ -405,7 +406,7 @@ VEYA
 
 
 
-2 - Sonra tekrar çalıştırın artık node'nuz güncellendi 
+2 - Then restart it, your node is now updated.
 
 
 
