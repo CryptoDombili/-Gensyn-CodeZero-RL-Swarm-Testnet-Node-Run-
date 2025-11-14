@@ -323,7 +323,7 @@ OR
 
 
    ```bash
-    screen -r  "screen numarası"
+    screen -r  "screen number"
    ```      
 
       
