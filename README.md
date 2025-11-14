@@ -119,7 +119,7 @@ OR
 
 
 
-2.  *Install General Utility Programs and Tools**
+2.  **Install General Utility Programs and Tools**
 
     ```bash
     sudo apt install screen curl iptables build-essential git wget lz4 jq make gcc nano automake autoconf tmux htop nvme-cli libgbm1 pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev  -y
@@ -150,7 +150,7 @@ OR
     ```
 
 
-5. *Load the yarn**
+5. **Load the yarn**
 
 
 
