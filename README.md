@@ -241,7 +241,12 @@ VEYA
 
 
 
+3- Swarm'ı kurun
 
+
+   ```bash
+    bash run_rl_swarm.sh
+   ```
 
 
 
